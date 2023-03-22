@@ -1,0 +1,57 @@
+@import './variables.scss';
+
+body {
+  background-image: url('../images/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+  background-color: $clr-300;
+  background-size: 100%;
+
+  padding: 0 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: $ff-regular;
+  font-size: $fs-regular;
+  font-weight: $fw-medium;
+  color: $clr-400;
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  body {
+  background-image: url('../images/pattern-background-desktop.svg');
+  font-size: $fs-regular-desktop;
+  }
+}
+
+.button {
+  background: none;
+  border: none;
+  font-weight: $fw-heavy;
+  cursor: pointer;
+
+  &.button-confirm {
+    color: $clr-100;
+    background-color: $clr-500;
+    border-radius: 11px;
+    box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+    padding: 0.938rem;
+    transition: 0.1s;
+
+    &:hover {
+      background-color: $clr-hover;
+    }
+  }
+
+  &.button-cancel {
+    align-self: center;
+    color: $clr-400;
+    transition: 0.1s;
+    
+    &:hover {
+      color: $clr-600;
+    }
+  }
+}

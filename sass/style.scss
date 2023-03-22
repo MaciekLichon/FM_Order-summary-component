@@ -1,0 +1,87 @@
+@import './variables.scss';
+@import './reset.scss';
+@import './general.scss';
+
+.card {
+  background-color: $clr-100;
+  box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
+  border-radius: 20px;
+  overflow: hidden;
+
+  max-width: 450px;
+}
+
+.card__content { 
+  padding: 2rem 1.5rem; 
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card__title {
+  font-size: $fs-header;
+  color: $clr-600;
+  font-weight: $fw-heavy;
+}
+
+.card__description {
+  padding: 0 0.5rem;
+  margin-top: -0.5rem;
+  line-height: $lh-regular;
+}
+
+.card__pricing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $clr-200;
+  padding: 1rem;
+  border-radius: 11px;
+
+  .card__planDetails {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: $fs-accent;
+
+    .card__planName {
+      color: $clr-600;
+      font-weight: $fw-heavy;
+    }
+  }
+
+  .card__changeLink {
+    font-weight: $fw-bold;
+    color: $clr-500;
+    font-size: $fs-accent-small;
+    transition: 0.1s;
+
+    &:hover {
+      color: $clr-hover;
+      text-decoration: none;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .card__content {
+    padding: 2.813rem 3rem 3rem 3rem;
+    gap: 2rem;
+  }
+
+  .card__title { font-size: $fs-header-desktop; }
+  .card__description { margin-top: -1rem; }
+
+  .card__pricing {
+    padding: 1.5rem;
+    margin-top: -0.75rem;
+
+    .card__planDetails {
+      font-size: $fs-regular-desktop;
+    }
+    .card__changeLink {
+      font-size: $fs-accent;
+    }
+  }
+
+}
